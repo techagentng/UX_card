@@ -1,0 +1,211 @@
+:root{
+    --primary-color: rgba(13, 110, 139, 0.75); /* last value makes it transparent*/
+    --overlay-color:    rgba(24, 39, 51, 0.85);
+    --menu-speed: 0.75s;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+    height: 80vh;
+    background-color: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+p, h3, a{
+    color: white;
+}
+.likes{
+    margin-top: 19px;
+}
+.likes p{
+    line-height: .5px;
+    margin:0;
+}
+.card{
+    padding: 15px;
+    max-width: 280px;
+    height: 500px;
+    background-color:#292e44;
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.51);
+    position: relative;
+}
+.addBg{
+    background-color: white;
+}
+.white{
+    color: #292e44;
+}
+.card-head{
+    width: 100%;
+    height: 30px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.left-arr{
+    width: 20px;
+    height: 20px;
+    align-self: flex-end;
+}
+.right-group img{
+    width: 18px;
+    height: 18px;
+}
+.card-head .right-group{
+    width: 80px;
+    height: 20px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+p.tagline{
+    margin-bottom: 10px;
+    line-height-step: .5rem;
+    font-size: .87rem;
+}
+.hire-button{
+    padding: 5px 30px;
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+    text-decoration: none;
+    color: white;
+    border-radius: 23px;
+    font-size: .8rem;
+}
+.hire-button:hover{
+    background-image: linear-gradient(to top, #88d3ce 0%, #6e45e2 100%);
+    text-decoration: none;
+    color: lightblue;
+}
+
+.card-img-cont{
+    background-color: white;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    position: relative;
+    background-image: url(profile.png);
+    background-size: cover;                      /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;              /* optional, center the image */
+    z-index: 3;
+}
+.card-img-cont img{
+    position: absolute;
+    top: 60px;
+    right: 0;
+}
+.slt{
+    position: absolute;
+    top: 80px;
+    right: 300px;
+}
+.openbtn{
+    font-size: 20px;
+    cursor: pointer;
+    background:  #EC38BC;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(45deg,#03001E,#7303C0 ,  #EC38BC);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(45deg,#03001E,#7303C0 ,   #EC38BC);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white !important;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    z-index: 45;
+  }
+  .openbtn:hover{
+    background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
+    color: wheat !important;
+  }
+.gap{
+    margin-top: 5px;
+}
+hr{
+    color: white;
+    border-style: inset;
+}
+.card-content{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+    height: 250px;
+}
+p.tag{
+    line-height: 0.9px;
+    margin-bottom: 25px;
+    margin-top: 6px;
+    font-size: .87rem;
+}
+.socials, .likes{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    color: white;
+}
+.follow{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-size: .7rem;
+    margin-top: 5px;
+    font-size: .87rem;
+}
+.socials{
+    margin-top: 10px;
+}
+.socials a{
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+     /*background-image: url(icons/be.png);*/                         /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;  
+    position: relative;
+}
+.socials a::after{
+   content: url(icons/be.png);
+   position: absolute;
+   top: 15px;
+   left: 15px;
+}
+.socials a.test::after{
+    content: url(icons/love.png);
+    position: absolute;
+    top: 20px;
+    left: 21px;
+ }
+ .socials a.test2::after{
+    content: url(icons/be.png);
+    position: absolute;
+    top: 20px;
+    left: 21px;
+ }
+.socials a:nth-child(2){
+    background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
+}
+.socials a:nth-child(3){
+    background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
+}
+.socials a:nth-child(3){
+    background-image: linear-gradient(to top, #88d3ce 0%, #6e45e2 100%);
+}
+#Layer_1{
+    position: absolute;
+    left: 0;
+}
+#Layer_2{
+    position: absolute;
+    bottom: 0;
+}
