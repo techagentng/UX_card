@@ -10,12 +10,8 @@
 }
 body{
 	font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
-    height: 80vh;
+    height: 100vh;
     background-color: wheat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
 }
 p, h3, a{
     color: white;
@@ -29,15 +25,22 @@ p, h3, a{
 }
 .card{
     padding: 15px;
-    max-width: 280px;
+    width: 280px;
     height: 500px;
     background-color:#292e44;
     border-radius: 10px;
     box-shadow: 10px 10px 30px rgba(0,0,0,0.51);
-    position: relative;
+    position: absolute;
+    z-index: 80;
 }
 .addBg{
     background-color: white;
+}
+.wc{
+    background-color: white;
+}
+.black{
+    color: whitesmoke;
 }
 .white{
     color: #292e44;
@@ -48,6 +51,10 @@ p, h3, a{
     margin: auto;
     display: flex;
     justify-content: space-between;
+}
+.hold-card{
+    display: flex;
+    justify-content: center;
 }
 .left-arr{
     width: 20px;
@@ -131,8 +138,12 @@ p.tagline{
     margin-top: 5px;
 }
 hr{
-    color: white;
+    color: lightgrey;
     border-style: inset;
+    position: absolute;
+    top: 63%;
+    width: 90%;
+    opacity: 0.25;
 }
 .card-content{
     width: 100%;
@@ -204,8 +215,60 @@ p.tag{
 #Layer_1{
     position: absolute;
     left: 0;
+    width: 700px;
+    top: -190px;
 }
 #Layer_2{
     position: absolute;
     bottom: 0;
+}
+.hold{
+    max-width: 600px;
+}
+@media (max-width: 736px){
+    body{
+        height: 100vh;
+    }
+    .hold-card{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .card{
+        padding: 15px;
+        width: 100%;
+        height: 100%;
+        background-color:#292e44;
+        border-radius: 10px;
+        box-shadow: 10px 10px 30px rgba(0,0,0,0.51);
+        position: absolute;
+        top: 0;
+    }
+    #Layer_1{
+        display: none;
+    }
+    #Layer_2{
+        position: absolute;
+        bottom: 0;
+    }
+    .hold{
+        max-width: 80%;
+    }
+    .openbtn{
+        top: 30px;
+        font-size: 17px;
+        padding: 5px 25px;
+        border: none;
+        border-radius: 5px;
+        z-index: 45;
+        left: 130px;
+        width: 120px;
+        
+    }
+    .socials a{
+        margin-top: 100px;
+    }
+    hr{
+        margin-top: -50px;
+    }
 }
